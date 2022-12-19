@@ -1,8 +1,8 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { PostPenentuHama } from "../api/PostPenentuHama"
 import { DropdownKondisiAnakan, DropdownKondisiBatang, DropdownKondisiBuah, DropdownKondisiDaun, DropdownKondisiFisik, DropdownMusim, DropdownPertumbuhan, DropdownVarietas } from "../components/DropdownKonsulHama"
 
-export function KonsulHama(){
+export function KonsulHama({setpredict,calculateHama}){
     const[petumbuhan,setPertumbuhan] = useState()
     const[varietas,setVarietas] = useState()
     const[kondisiMusim,setKondisiMusim] = useState()
@@ -13,27 +13,28 @@ export function KonsulHama(){
     const[kondisiAnakan,setKondisiAnakan] = useState()
     const[kondisiFisik,setKondisiFisik] = useState()
 
-    const printhama = () =>{
-        const kondisi = {
-            pertumbuhan: "t3",
-            varietas: "inpari-23",
-            musim: "panas",
-            kondisi_daun: "normal",
-            kondisi_buah: "normal",
-            kondisi_batang: "layu",
-            kondisi_anakan: "sedikit",
-            kondisi_fisik: "kerdil"
-        }
-        console.log(kondisi)
+    useEffect(()=>{
+        setpredict({
+            pertumbuhan: petumbuhan,
+            varietas: varietas,
+            musim: kondisiMusim,
+            kondisi_daun: kondisiDaun,
+            kondisi_buah: kondisiBuah,
+            kondisi_batang: kondisiBatang,
+            kondisi_anakan: kondisiAnakan,
+            kondisi_fisik: kondisiFisik
+        })
+    },[
+        petumbuhan,
+        varietas,
+        kondisiAnakan,
+        kondisiMusim,
+        kondisiDaun,
+        kondisiBuah,
+        kondisiBatang,
+        kondisiFisik
+    ])
 
-        PostPenentuHama(kondisi)
-        .then((r)=>{
-            console.log(r)
-        })
-        .catch((e)=>{
-            console.log(e)
-        })
-    }
 
     return(
         <div className="bg-gray-300 rounded p-5 shadow-lg">
@@ -63,7 +64,7 @@ export function KonsulHama(){
             <div>
                 <button 
                 className="p-3 rounded bg-blue-500 text-white"
-                onClick={printhama}
+                onClick={calculateHama}
                 >Analisa</button>
             </div> 
         </div>
