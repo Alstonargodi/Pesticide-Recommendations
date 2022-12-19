@@ -3,11 +3,11 @@ export const JenisMusim = () =>{
     return[
         {
             id:0,
-            nama:"musim panas"
+            nama:"panas"
         },
         {
             id:1,
-            nama:"musim hujan"
+            nama:"hujan"
         },
     ]
 }

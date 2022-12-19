@@ -7,10 +7,15 @@ import { KondisiDaun } from "../model/KondisiDaun"
 import { KondisiFisik } from "../model/KondisiFisik"
 import { VarietasPadi } from "../model/VarietasPadi"
 
-export function DropdownPertumbuhan(){
+export function DropdownPertumbuhan({setvalue}){
     return(
         <div className=" bg-gray-200">
-            <select name="pertumbuhan" className="rounded p-3 w-full">
+            <select 
+            name="pertumbuhan" 
+            className="rounded p-3 w-full"
+            onChange={(e)=>setvalue(e.target.value)}
+            >
+                <option value="" selected disabled hidden>Pertumbuhan</option>
                 {
                     FasePertumbuhan().map((value)=>(
                         <option value={value.tahap}>{value.nama}</option>                       
@@ -21,10 +26,13 @@ export function DropdownPertumbuhan(){
     )
 }
 
-export function DropdownVarietas(){
+export function DropdownVarietas({setvalue}){
     return(
         <div className=" bg-gray-200">
-            <select name="pertumbuhan" className="rounded p-3 w-full">
+            <select name="pertumbuhan" className="rounded p-3 w-full"
+            onChange={(e)=>setvalue(e.target.value)}
+            >
+                <option value="" selected disabled hidden>Varietas</option>
                 {
                     VarietasPadi().map((value)=>(
                         <option value={value.nama}>{value.nama}</option>                       
@@ -35,10 +43,15 @@ export function DropdownVarietas(){
     )
 }
 
-export function DropdownKondisiDaun(){
+export function DropdownKondisiDaun({setvalue}){
     return(
         <div className=" bg-gray-200">
-            <select name="pertumbuhan" className="rounded p-3 w-full">
+            <select 
+            name="pertumbuhan" 
+            className="rounded p-3 w-full"
+            onChange={(e)=>setvalue(e.target.value)}
+            >
+                <option value="" selected disabled hidden>Kondisi Daun</option>
                 {
                     KondisiDaun().map((value)=>(
                         <option value={value.nama}>{value.nama}</option>                       
@@ -49,10 +62,13 @@ export function DropdownKondisiDaun(){
     )
 }
 
-export function DropdownMusim(){
+export function DropdownMusim({setvalue}){
     return(
         <div className=" bg-gray-200">
-            <select name="pertumbuhan" className="rounded p-3 w-full">
+            <select name="pertumbuhan" className="rounded p-3 w-full"
+            onChange={(e)=>setvalue(e.target.value)}
+            >
+                <option value="" selected disabled hidden>Musim</option>
                 {
                     JenisMusim().map((value)=>(
                         <option value={value.nama}>{value.nama}</option>                       
@@ -63,10 +79,13 @@ export function DropdownMusim(){
     )
 }
 
-export function DropdownKondisiBuah(){
+export function DropdownKondisiBuah({setvalue}){
     return(
         <div className=" bg-gray-200">
-            <select name="pertumbuhan" className="rounded p-3 w-full">
+            <select name="pertumbuhan" className="rounded p-3 w-full"
+            onChange={(e)=>setvalue(e.target.value)}
+            >
+                <option value="" selected disabled hidden>Kondisi Buah</option>
                 {
                     KondisiBuah().map((value)=>(
                         <option value={value.nama}>{value.nama}</option>                       
@@ -77,10 +96,13 @@ export function DropdownKondisiBuah(){
     )
 }
 
-export function DropdownKondisiBatang(){
+export function DropdownKondisiBatang({setvalue}){
     return(
         <div className=" bg-gray-200">
-            <select name="pertumbuhan" className="rounded p-3 w-full">
+            <select name="pertumbuhan" className="rounded p-3 w-full"
+            onChange={(e)=>setvalue(e.target.value)}
+            >
+                <option value="" selected disabled hidden>Kondisi Batang</option>
                 {
                     KondisiBatang().map((value)=>(
                         <option value={value.nama}>{value.nama}</option>                       
@@ -91,10 +113,13 @@ export function DropdownKondisiBatang(){
     )
 }
 
-export function DropdownKondisiAnakan(){
+export function DropdownKondisiAnakan({setvalue}){
     return(
         <div className=" bg-gray-200">
-            <select name="pertumbuhan" className="rounded p-3 w-full">
+            <select name="pertumbuhan" className="rounded p-3 w-full"
+            onChange={(e)=>setvalue(e.target.value)}
+            >
+                <option value="" selected disabled hidden>Kondisi Anakan</option>
                 {
                     KondisiAnakan().map((value)=>(
                         <option value={value.nama}>{value.nama}</option>                       
@@ -105,10 +130,13 @@ export function DropdownKondisiAnakan(){
     )
 }
 
-export function DropdownKondisiFisik(){
+export function DropdownKondisiFisik({setvalue}){
     return(
         <div className=" bg-gray-200">
-            <select name="pertumbuhan" className="rounded p-3 w-full">
+            <select name="pertumbuhan" className="rounded p-3 w-full"
+                        onChange={(e)=>setvalue(e.target.value)}
+            >
+                <option value="" selected disabled hidden>Kondisi Fisik</option>
                 {
                     KondisiFisik().map((value)=>(
                         <option value={value.nama}>{value.nama}</option>                       

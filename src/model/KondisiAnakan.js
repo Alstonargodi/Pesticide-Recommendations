@@ -7,7 +7,7 @@ export const KondisiAnakan = () =>{
         },
         {
             id:1,
-            nama:"sedkit"
+            nama:"sedikit"
         }
     ]
 }

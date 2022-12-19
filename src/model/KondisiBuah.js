@@ -7,7 +7,7 @@ export const KondisiBuah = () =>{
         },
         {
             id:1,
-            nama:"bintik-bintik"
+            nama:"bintik"
         },
         {
             id:2,

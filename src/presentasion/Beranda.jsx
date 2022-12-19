@@ -1,6 +1,8 @@
 import { DropdownKondisiAnakan, DropdownKondisiBatang, DropdownKondisiBuah, DropdownKondisiDaun, DropdownKondisiFisik, DropdownMusim, DropdownPertumbuhan, DropdownVarietas } from "../components/DropdownKonsulHama"
+import { KonsulHama } from "./KonsulHama"
 
 export function Beranda(){
+
     return(
         <div className="min-h-screen bg-gray-600 min-w-screen">
             <div className="container">
@@ -25,38 +27,6 @@ export function Beranda(){
 }
 
 
-function KonsulHama(){
-    return(
-        <div className="bg-gray-300 rounded p-5 shadow-lg">
-            <h1 className="text-start text-xl px-5">Konsultasi Hama</h1>
-            <div className="flex p-3">
-                <div className="w-1/2 px-2">
-                    <h1 className="text-start text-xl py-5">Fase pertumbuhan</h1>
-                    <DropdownPertumbuhan></DropdownPertumbuhan>
-                    <h1 className="text-start text-xl py-5">Varietas</h1>
-                    <DropdownVarietas></DropdownVarietas>
-                    <h1 className="text-start text-xl py-5">Jenis Musim</h1>
-                    <DropdownMusim></DropdownMusim>
-                    <h1 className="text-start text-xl py-5">Kondisi Daun</h1>
-                    <DropdownKondisiDaun></DropdownKondisiDaun>
-                </div>
-                <div className="w-1/2 px-2">
-                    <h1 className="text-start text-xl py-5">Kondisi Buah</h1>
-                    <DropdownKondisiBuah></DropdownKondisiBuah>
-                    <h1 className="text-start text-xl py-5">Kondisi Batang</h1>
-                    <DropdownKondisiBatang></DropdownKondisiBatang>
-                    <h1 className="text-start text-xl py-5">Kondisi Anakan</h1>
-                    <DropdownKondisiAnakan></DropdownKondisiAnakan>
-                    <h1 className="text-start text-xl py-5">Kondisi Fisik</h1>
-                    <DropdownKondisiFisik></DropdownKondisiFisik>
-                </div>
-            </div>           
-            <div>
-                <button className="p-3 rounded bg-blue-500 text-white">Analisa</button>
-            </div> 
-        </div>
-    )
-}
 
 function HasilKonsulHama(){
     return(

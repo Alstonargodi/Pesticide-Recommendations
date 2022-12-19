@@ -3,19 +3,19 @@ export const KondisiDaun = () =>{
     return[
         {
             id:0,
-            nama: "Normal"
+            nama: "normal"
         },
         {
             id:1,
-            nama: "Kuning"
+            nama: "kuning"
         },
         {
             id:2,
-            nama: "Bintik-bintik"
+            nama: "bintik"
         },
         {
             id:3,
-            nama: "Habis"
+            nama: "habis"
         },
     ]
 }
